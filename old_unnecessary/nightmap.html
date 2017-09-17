@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+ <div class="topnav" id="myTopnav">
+ <a href="index.html">Home</a>
+ <a href="regmap.html">Map</a>
+ <a href="nightmap.html">Night Map</a>
+ <a href="satmap.html">Satellite Map</a>
+ </div>
+
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZm9ndGVybWluYXRvciIsImEiOiJjajZ2bjkzYmQxMTF4MnhwaDB3NXJmdnhhIn0.ngZuI6wgIrpeeRn4Z3EQ5w';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/navigation-preview-night-v2', // stylesheet location
+    center: [151.2, -33.86], // starting position [lng, lat]
+    zoom: 10 // starting zoom
+});
+</script>
